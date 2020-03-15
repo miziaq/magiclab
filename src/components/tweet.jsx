@@ -6,7 +6,7 @@ function Tweet(props) {
             <img className='tweet-card__avatar' src={props.tweet.image} alt={props.tweet.username + ' avatar'}></img>
             <div>
                 <span>{props.tweet.username}</span>
-                <p>{props.tweet.text}</p>
+                <p className="tweet-card__content">{props.tweet.text}</p>
             </div>
         </li>
     )

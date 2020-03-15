@@ -1,0 +1,24 @@
+.tweet-card {
+    border: solid 1px #d9dfe4;
+    align-items: flex-start;
+}
+
+@media screen and (min-width: 480px) {
+    .tweet-card {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.tweet-card + .tweet-card {
+    margin-top: 2em;
+}
+
+.tweet-card__avatar {
+    border-radius: 50%;
+}
+
+.tweet-card__content {
+    background-color: #d9dfe4;
+}
+
