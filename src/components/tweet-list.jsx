@@ -1,24 +1,23 @@
 import React from 'react';
 import Tweet from './tweet';
 
-
 class TweetList extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             tweets: []
         }
     }
 
-    componentDidMount() {
+    componentWillMount() {
         setInterval(
-            () => this.getTweets(),
+            () => this.updateTweets(),
             2000
         );
     }
 
-    async getTweets() {
-        const endpoint = 'https://magiclab-twitter-interview.herokuapp.com/candidate-name/'
+    async updateTweets() {
+        const endpoint = 'https://magiclab-twitter-interview.herokuapp.com/blazej-misiak/'
         const lastId = (this.state.tweets.length && this.state.tweets[0].id) || 0;
         if (lastId >= 10000) {
             fetch(endpoint + 'reset')
