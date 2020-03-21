@@ -1,0 +1,23 @@
+.TweetCard {
+  border: solid 1px #d9dfe4;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 480px) {
+  .TweetCard {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.TweetCard + .TweetCard {
+  margin-top: 2em;
+}
+
+.TweetAvatar {
+  border-radius: 50%;
+}
+
+.TweetContent {
+  background-color: #d9dfe4;
+}

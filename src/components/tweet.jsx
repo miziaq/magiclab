@@ -1,15 +1,21 @@
-import React from 'react';
+import React from "react";
+
+import styles from "./tweet.module.css";
 
 function Tweet(props) {
-    return (
-        <li  className='tweet-card'>
-            <img className='tweet-card__avatar' src={props.tweet.image} alt={props.tweet.username + ' avatar'}></img>
-            <div>
-                <span>{props.tweet.username}</span>
-                <p className="tweet-card__content">{props.tweet.text}</p>
-            </div>
-        </li>
-    )
+  return (
+    <li className={styles.TweetCard}>
+      <img
+        className={styles.TweetAvatar}
+        src={props.tweet.image}
+        alt={props.tweet.username + " avatar"}
+      />
+      <div>
+        <span>{props.tweet.username}</span>
+        <p className={styles.TweetContent}>{props.tweet.text}</p>
+      </div>
+    </li>
+  );
 }
 
 export default Tweet;

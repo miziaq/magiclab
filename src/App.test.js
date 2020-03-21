@@ -1,9 +1,12 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render } from "@testing-library/react";
+import { toBeInTheDocument } from "@testing-library/jest-dom/";
+import App from "./App";
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+expect.extend({ toBeInTheDocument });
+
+test("renders title", () => {
+  const { getByTestId } = render(<App />);
+  const titleElement = getByTestId("header");
+  expect(titleElement).toBeInTheDocument();
 });
